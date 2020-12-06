@@ -1,0 +1,15 @@
+{
+    "ClassURI": {
+        "name": "class one",
+        "flashcards": [
+            {
+                "question": "What is 3 minus 2?",
+                "answer": "one"
+            },
+            {
+                "question": "What is the best number",
+                "answer": "one"
+            }
+        ]
+    }
+}
