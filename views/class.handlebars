@@ -1,0 +1,22 @@
+<main class="content">
+
+	<button type="button" class="back-button">Back</button>
+
+	<div class="class-title">
+		<h2>{{name}}</h2>
+	</div>
+	
+	<div class="the-buttons">
+		<button type="button" class="flashcard-mode">Flashcard Mode</button>
+		<button type="button" class="quiz-mode">Quiz Mode</button>
+	</div>
+
+	<section class="flashcard-definitions">
+
+		{{#each classData}}
+			{{>definitions}}
+		{{/each}}
+
+	</section>
+
+</main>
