@@ -8,10 +8,10 @@ templates['definitions'] = template({"compiler":[8,">= 4.3.0"],"main":function(c
         return undefined
     };
 
-  return "<div class=\"each-card\">\r\n	<p class=\"question\">"
+  return "<div class=\"each-card\">\n	<p class=\"question\">"
     + alias4(((helper = (helper = lookupProperty(helpers,"question") || (depth0 != null ? lookupProperty(depth0,"question") : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"question","hash":{},"data":data,"loc":{"start":{"line":2,"column":21},"end":{"line":2,"column":33}}}) : helper)))
-    + "</p>\r\n	<p class=\"answer\">"
+    + "</p>\n	<p class=\"answer\">"
     + alias4(((helper = (helper = lookupProperty(helpers,"answer") || (depth0 != null ? lookupProperty(depth0,"answer") : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"answer","hash":{},"data":data,"loc":{"start":{"line":3,"column":19},"end":{"line":3,"column":29}}}) : helper)))
-    + "</p>\r\n</div>";
+    + "</p>\n\n	<button type=\"button\" class=\"delete-flashcard\"><i class=\"fas fa-trash-alt\"></i></button>\n</div>\n";
 },"useData":true});
 })();
