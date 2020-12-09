@@ -24,14 +24,27 @@
 <div id="modal-background" hidden></div>
 
 <div id="quizmode-modal">
-	<div id="question">
-		<p>question</p>
-	</div>
-	<div id="answer">
-		<input type="text" id="answer-field">
-	</div>
-	<div id="real-answer">
-		<p>real answer</p>
+	<div class="modal-content">
+
+		<div class="modal-header">
+          <h3>Quiz Mode</h3>
+          <button type="button" id="modal-close" class="modal-hide-button">&times;</button>
+        </div>
+
+        <div class="modal-body">
+			<div id="question">
+				<p>question</p>
+			</div>
+			<div id="answer">
+				<input type="text" id="answer-field">
+			</div>
+			<div id="real-answer">
+				<p>real answer</p>
+			</div>
+			
+        <div class="modal-footer">
+          <button type="button" id="modal-done" class="modal-hide-button action-button">Done</button>
+        </div>
 	</div>
 </div>
 
