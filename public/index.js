@@ -77,6 +77,7 @@ var prev_button = document.getElementById('prev-button');
 
 document.getElementById('quiz-button').onclick = function() {
 	document.getElementById('quiz').style.display = 'flex';
+	//document.getElementById('quiz').classList.add(".hidden");
 	active_question = 0;
 	update_buttons();
 	update_questions();

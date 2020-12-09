@@ -7,13 +7,19 @@
 	<button type="button" id="quiz-button">QUIZ</button>
     
     <section id="quiz" hidden>
-        <div id="modal-backdrop" class="hidden"></div>
-        <div id='prev-button'><i class="fas fa-caret-left"></i></div>
-        <div id='next-button'><i class="fas fa-caret-right"></i></div>
-        <div id='close-button'><i class="fas fa-window-close"></i></div>
-        {{#each questions}}
-            {{>questionAnswer}}
-        {{/each}}
+    <div id="modal-backdrop" class="hidden"></div>
+        <div id="quiz-content">
+            <div class="modal-header">
+                <h3>QUIZ MODE</h3>
+                <div id='close-button'>x</div>
+            </div>
+            <div id='prev-button'><i class="fas fa-caret-left"></i></div>
+            <div id='next-button'><i class="fas fa-caret-right"></i></div>
+            
+            {{#each questions}}
+                {{>questionAnswer}}
+            {{/each}}
+        </div>
     </section>
 
 <div class="more-options-menu" hidden>
