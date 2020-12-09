@@ -1,0 +1,94 @@
+body {
+	font-family: Arial, sans-serif;
+	background-color: #FEF1EB;
+	margin: 0;
+}
+
+#header-bar {
+	display: flex;
+	flex-direction: row;
+	display: static;
+	background-color: #433A3F;
+	justify-content: space-between;
+	margin: 0 0 20px 0;
+	box-shadow: 0 4px 1px grey;
+}
+
+#title-top {
+	color: #FEF1EB;
+	font-size: 50px;
+	text-shadow: 0 4px 1px black;
+	margin: 20px;
+}
+
+#settings, #search {
+	background-color: transparent;
+	border: none;
+	margin: 10px;
+	font-size: 50px;
+}
+
+#homepage-material {
+	display: flex;
+	flex-flow: row wrap;
+}
+
+.card {
+	height: 180px;
+	width: 300px;
+	border-style: line;
+	justify-content: space-between;
+	margin: 15px;
+	border-radius: 18px;
+	border-style: solid;
+	border-color: black;
+	border-width: 2px;
+}
+
+#add-class {
+	font-size: 40px;
+	background-color: transparent;
+}
+
+#class-card {
+	background-color: #54494f;
+	text-align:center;
+}
+
+#class-title {
+	
+}
+
+button.more-options {
+	background-color: transparent;
+	border-style: none;
+	font-size: 30px;
+	color: #EBEBEB;
+	position: relative;
+	bottom: 45px;
+	left: 125px;
+}
+
+#quizmode-modal {
+	position: fixed;
+}
+
+.modal-header {
+	position: relative;
+}
+
+#question {
+	font-family: Arial, sans-serif;
+}
+
+#answer {
+	font-family: Arial, sans-serif;
+}
+
+#real-answer {
+	font-family: Arial, sans-serif;
+}
+
+.modal-footer {
+	display: flex;
+}

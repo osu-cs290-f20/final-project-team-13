@@ -1,0 +1,20 @@
+<main class="content" id = "homepage-material">
+	
+	<button id="add-class" class="card"><i class="fas fa-plus"></i></button>
+
+	<div id="classes">
+		{{#each classData}}
+			{{>classCard}}
+		{{/each}}
+	</div>
+
+	<div id="add-class-modal">
+		<div id="new-class-name-form">
+			<label for="new-class-name-input" class="new-class-name-input-label">Name of New Class</label>
+			<input type="text" name="new-class-name-input" id="new-class-name-input">
+		</div>
+
+		<button type="button" id="add-new-class-button">Add Class</button>
+	</div>
+
+</main>
