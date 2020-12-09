@@ -125,7 +125,8 @@ app.post('/:class/removeCard', function (req, res, next){
     console.log("req.body:", req.body);
     if(req.body && req.body.question && req.body.answer){
         var URI = encodeURI(req.params.class);
-        if(classData[URI]){
+        if(classData[URI] && classData[URI].flashcards.indexOf({question: req.body.question,
+            answer: req.body.answer}) != -1){
             //remove flashcard
             classData[URI].flashcards.splice(classData[URI].flashcards.indexOf({
                 question: req.body.question,
