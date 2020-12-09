@@ -35,6 +35,15 @@
             	<label for="add-class-input">Class: </label>
             	<input type="text" id="add-class-input"></input>
           	</div>
+			<div class="question-input-element">
+            	<label for="add-question-input">Question: </label>
+            	<input type="text" id="add-question-input"></input>
+          	</div>
+			<div class="answer-input-element">
+            	<label for="add-answer-input">Answer: </label>
+            	<input type="text" id="add-answer-input"></input>
+          	</div>
+			<button type="button" id="another-question-button">+</button>
 		</div>
 
 		<div class="modal-footer">
@@ -44,27 +53,24 @@
 </div>
 
 <div id="quizmode-modal">
+	<div class = "modal-header">
+			<h3>Quiz Mode</h3>
+			<button type="button" id="modal-close" class="modal-hide-button">&times;</button>
+	</div>
 	<div class="modal-content">
-
         <div class="modal-body">
 			<div class="quiz-input-element">
-            	<label for="quiz-question-input">Question: </label>
+            	<label for="quiz-question-input">{{partialQ}}: </label>
             	<input type="text" id="quiz-question-input"></input>
           	</div>
-
-			<div>
-				<label for="quiz-answer-input">Answer: </label>
-            	<input type="text" id="quiz-answer-input"></input>
+			<div class="correct-answer">
+				<h2>Correct Answer: {{answer}}</h2>
 			</div>
-
-			<div>
-				//real answer
-			</div>
-
         </div>
-
         <div class="modal-footer">
           <button type="button" id="modal-done" class="modal-hide-button action-button">Done</button>
+		  <button type="button" id="modal-back">Back</button>
+		  <button type="button" id="modal-next">Next</button>
         </div>
 	</div>
 </div>
