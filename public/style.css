@@ -54,3 +54,27 @@ body {
 .class-card {
 	background-color: 54494f;
 }
+
+#quizmode-modal {
+	position: fixed;
+}
+
+.modal-header {
+	position: relative;
+}
+
+#question {
+	font-family: Arial, sans-serif;
+}
+
+#answer {
+	font-family: Arial, sans-serif;
+}
+
+#real-answer {
+	font-family: Arial, sans-serif;
+}
+
+.modal-footer {
+	display: flex;
+}
