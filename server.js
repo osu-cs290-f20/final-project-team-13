@@ -17,6 +17,7 @@ app.get('/', function(req, res, next) {
 
 app.get('/class/:n', function(req, res, next) {
     var n = req.params.n;
+    console.log(classData);
     next();
 });
 

@@ -4,6 +4,18 @@
 	<button type="button" class="more-options" class="hidden"><i class="fas fa-ellipsis-v"></i></button>
 </div>
 
+	<button type="button" id="flashcard-button">STUDY</button>
+    
+    <section id="flashcards" hidden>
+        <div id="modal-backdrop" class="hidden"></div>
+        <div id='prev-button'><i class="fas fa-caret-left"></i></div>
+        <div id='next-button'><i class="fas fa-caret-right"></i></div>
+        <div id='close-button'><i class="fas fa-window-close"></i></div>
+        {{#each flashcards}}
+            {{>flashcard}}
+        {{/each}}
+    </section>
+
 <div class="more-options-menu" hidden>
 	<button type="button" class="delete-class">Delete</button>
 </div>
