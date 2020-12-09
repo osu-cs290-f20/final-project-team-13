@@ -9,6 +9,27 @@
             {
                 "question": "What is the best number",
                 "answer": "one"
+            },
+            {
+                "question": "Do I hate finals week",
+                "answer": "yes"
+            }
+        ]
+    }
+    "Help": {
+        "name": "class two",
+        "flashcards": [
+            {
+                "question": "ham?",
+                "answer": "borgar"
+            },
+            {
+                "question": "send help",
+                "answer": "please"
+            },
+            {
+                "question": "i need to sleep",
+                "answer": "dear god this is awful"
             }
         ]
     }
