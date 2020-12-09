@@ -135,7 +135,7 @@ body {
 }
 
 #next-button, #prev-button{
-	position:relative;
+	position:absolute;
 	z-index:1020;
 	height: 60px;
 	width: 60px;
@@ -171,5 +171,5 @@ body {
 }
 
 #next-button{
-	left:565px;
+	left:625px;
 }

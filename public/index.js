@@ -5,12 +5,9 @@ var prev_button = document.getElementById('prev-button');
 
 document.getElementById('flashcard-button').onclick = function() {
 	document.getElementById('flashcards').style.display = 'flex';
-	
-	for(i = 0; i < flashcards.length; i++){
-		if(i != active_card)
-			flashcards[i].style.display = 'none';
-	}
+	active_card = 0;
 	update_buttons();
+	update_cards();
 }
 
 document.getElementById('close-button').onclick = function() {
@@ -18,25 +15,20 @@ document.getElementById('close-button').onclick = function() {
 }
 
 prev_button.onclick = function() {
-	console.log('prev');
+	console.log(active_card);
 	active_card -= 1;
 	update_buttons();
-
-	for(i = 0; i < flashcards.length; i++){
-		if(i != active_card){
-			flashcards[i].style.display = 'none';
-		}
-		else{
-			flashcards[i].style.display = 'block';
-		}
-	}	
+	update_cards();
 }
 
 next_button.onclick = function() {
-	console.log('next');
+	console.log(active_card);
 	active_card += 1;
 	update_buttons();
-	
+	update_cards();	
+}
+
+function update_cards(){
 	for(i = 0; i < flashcards.length; i++){
 		if(i != active_card){
 			flashcards[i].style.display = 'none';
@@ -44,18 +36,18 @@ next_button.onclick = function() {
 		else{
 			flashcards[i].style.display = 'block';
 		}
-	}	
+	}
 }
 
 function update_buttons(){
 	console.log(active_card);
-	if(!flashcards[active_card - 1])
+	if(flashcards[active_card - 1])
+		prev_button.style.display = 'block';
+	else
 		prev_button.style.display = 'none';
-	else
-		prev_button.style.display = 'inline';
 
-	if(!flashcards[active_card + 1])
-		next_button.style.display = 'none';
+	if(flashcards[active_card + 1])
+		next_button.style.display = 'block';
 	else
-		next_button.style.display = 'inline';
+		next_button.style.display = 'none';
 }
