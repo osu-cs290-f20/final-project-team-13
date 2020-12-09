@@ -10,6 +10,7 @@
 	<div class="the-buttons">
 		<button type="button" class="flashcard-mode">Flashcard Mode</button>
 		<button type="button" class="quiz-mode">Quiz Mode</button>
+		<button type="button" class="add-class-button">Add Class</button>
 	</div>
 
 	<section class="flashcard-definitions">
@@ -19,6 +20,8 @@
 		{{/each}}
 
 	</section>
+
+	<div id="modal-background" class="hidden"></div>
 
 	<div id="add-definition-modal">
 		<div id="question-form">
@@ -34,13 +37,11 @@
 		<button type="button" id="add-new-card-button">Add Card</button>
 	</div>
 
-	<div id="modal-background" hidden></div>
-
-	<div id="class-modal">
+	<div id="class-modal" class="hidden">
 		<div class = "modal-content">
 			<div class = "modal-header">
 				<h3>Add Class</h3>
-				<button type="button" id="modal-close" class="modal-hide-button">&times;</button>
+				<button type="button" id="modal-close" class="modal-hide-button"></button>
 			</div>
 
 			<div class="modal-body">
@@ -65,10 +66,10 @@
 		</div>
 	</div>
 
-	<div id="quizmode-modal">
+	<div id="quizmode-modal" hidden>
 		<div class = "modal-header">
 				<h3>Quiz Mode</h3>
-				<button type="button" id="modal-close" class="modal-hide-button">&times;</button>
+				<button type="button" id="modal-close" class="modal-hide-button"></button>
 		</div>
 		<div class="modal-content">
 			<div class="modal-body">
