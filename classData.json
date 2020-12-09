@@ -1,15 +1,32 @@
 {
-    "ClassURI": {
-        "name": "class one",
-        "flashcards": [
-            {
-                "question": "What is 3 minus 2?",
-                "answer": "one"
-            },
-            {
-                "question": "What is the best number",
-                "answer": "one"
-            }
-        ]
-    }
+  "ClassURI": {
+    "name": "class one",
+    "flashcards": [
+      {
+        "question": "What is 3 minus 2?",
+        "answer": "one"
+      },
+      {
+        "question": "What is the best number",
+        "answer": "one"
+      },
+      {
+        "question": "What's 5 - 4?",
+        "answer": "1"
+      }
+    ]
+  },
+  "class%20two": {
+    "name": "class two",
+    "flashcards": [
+      {
+        "question": "What's 5 - 3?",
+        "answer": "2"
+      }
+    ]
+  },
+  "class%20three": {
+    "name": "class three",
+    "flashcards": []
+  }
 }
