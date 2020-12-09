@@ -8,19 +8,19 @@ const { type } = require('os');
 const { EDESTADDRREQ } = require('constants');
 var port = process.env.PORT || 3000;
 
-//app.engine('handlebars', exphbs({defaultLayout: 'null'}));
-//app.set('view engine', 'handlebars');
+app.engine('handlebars', exphbs({defaultLayout: 'main'}));
+app.set('view engine', 'handlebars');
 
 app.use(express.json());
 app.use(express.static('public'));
 
-/* app.get('/', function(req, res, next) {
-    //doesn't need to be implemented until index.html is removed
-}); */
+app.get('/', function(req, res, next) {
+    res.status(200).render('homepage', {classData});
+});
 
 app.get('/class/:n', function(req, res, next) {
     var n = req.params.n;
-    next();
+    res.status(200).render('class', classData[n]);
 });
 
 //add a class to the list
