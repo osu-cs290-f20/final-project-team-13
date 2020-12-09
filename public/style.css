@@ -55,8 +55,8 @@ body {
 	text-align:center;
 }
 
-#class-title {
-	
+.class-title {
+	font-family: Arial, sans-serif;
 }
 
 button.more-options {
@@ -69,26 +69,74 @@ button.more-options {
 	left: 125px;
 }
 
+.hidden {
+	display: none;
+}
+
+#add-class-modal {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 1010;
+	overflow: scroll;
+}
+
+button#add-class {
+	position: fixed;
+	left: 50px;
+	bottom: 50px;
+	height: 50px;
+	width: 50px;
+}
+
+
+
+
+
+
+
+
+
 #quizmode-modal {
 	position: fixed;
 }
 
+#modal-background {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 1000;
+	background-color: rgba(0, 0, 0, 0.85);
+  }
+
 .modal-header {
 	position: relative;
+	background-color: #433A3F;
 }
 
-#question {
+.modal-body {
 	font-family: Arial, sans-serif;
-}
-
-#answer {
-	font-family: Arial, sans-serif;
-}
-
-#real-answer {
-	font-family: Arial, sans-serif;
+	background-color: #FEF1EB;
 }
 
 .modal-footer {
 	display: flex;
+}
+
+button.flashcard-mode {
+	background-color: transparent;
+	border-style: none;
+	font-size: 30px;
+	color: #EBEBEB;
+	position: relative;
+	bottom: 90px;
+	left: 125px;
+}
+
+.flashcard-definitions {
+	font-family: Arial, sans-serif;
 }
