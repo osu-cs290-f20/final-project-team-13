@@ -1,5 +1,5 @@
 {
-  "ClassURI": {
+  "class%20one": {
     "name": "class one",
     "flashcards": [
       {
@@ -27,6 +27,7 @@
   },
   "class%20three": {
     "name": "class three",
-    "flashcards": []
+    "flashcards": [
+    ]
   }
 }

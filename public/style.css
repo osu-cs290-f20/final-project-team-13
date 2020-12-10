@@ -398,7 +398,7 @@ div.class-title {
     transform:rotateY(180deg);
 }
 
-#close-button{
+#close-button #modal-close-button{
 	position:absolute;
 	top:-100px;
 	left:635px;
