@@ -118,6 +118,17 @@ function update_buttons_quiz(){
 		nextButton.style.display = 'none';
 }
 
+var addCardOption = document.querySelector(".add-card");
+if(addCardOption){
+	addCardOption.onclick = function(){
+		if(document.getElementById('add-definition-modal').hasAttribute('hidden')){
+			document.getElementById('add-definition-modal').removeAttribute('hidden');
+		}else{
+			document.getElementById('add-definition-modal').setAttribute('hidden', "");
+		}
+	}
+}
+
 var addCardButton = document.getElementById("add-new-card-button");
 if(addCardButton){
 	addCardButton.addEventListener('click', function(){
@@ -125,7 +136,11 @@ if(addCardButton){
 		var ans = document.getElementById('answer-input');
 		var question = ques.value;
 		var answer = ans.value;
-		addFlashCard(answer, question);
+		if(question && answer){
+			addFlashCard(answer, question);
+		} else {
+			alert('please add front and back');
+		}
 	});
 }
 
