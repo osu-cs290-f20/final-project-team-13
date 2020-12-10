@@ -8,12 +8,12 @@
 // 	open_menu.classList.toggle('hidden');
 // }
 
+
 // var class_card = document.querySelector(".card");
 // class_card.addEventListener('mouseover', moreOptions);
 
 // var menu = document.querySelector(".more-options");
 // menu.addEventListener('click', showMoreOptions);
-
 
 // function showQuizModal() {
 // 	var showQuizModal = document.getElementById('quizmode-modal');
@@ -88,6 +88,7 @@ document.getElementById('close-button').onclick = function() {
 	document.getElementById('quiz').style.display = 'none';
 }
 
+
 prev_button.onclick = function() {
 	console.log(active_question);
 	active_question -= 1;
@@ -125,3 +126,26 @@ function update_buttons(){
 	else
 		next_button.style.display = 'none';
 }
+
+var addCardButton = document.getElementById("add-new-card-button");
+if(addCardButton){
+	addCardButton.addEventListener('click', function(){
+		addFlashCard("test", "test");
+	});
+}
+
+var addClassButton = document.getElementById("add-class");
+if(addClassButton){
+	addClassButton.addEventListener('click', function(){
+		addClass("Test");
+	});
+}
+
+var flashCards = document.getElementsByClassName("each-card");
+console.log(flashCards);
+for (i = 0; i < flashCards.length; i++){
+	console.log(flashCards[i].lastElementChild);
+	flashCards[i].lastElementChild.addEventListener('click', function(){
+		removeFlashCard(event);
+	});
+
