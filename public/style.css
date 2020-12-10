@@ -104,6 +104,9 @@ body {
 	font-size: 28px;
 }
 
+.one-question-content {
+	left: 47px;
+}
 
 .one-question {
 	position: fixed;
@@ -135,6 +138,7 @@ body {
 }
 
 .answer{
+	top: 100px;
     background-color:#FEF1EB;
 }
 
@@ -189,9 +193,9 @@ body {
 
 
 #prev-button{
-	left:-85px;
+	left:283px;
 }
 
 #next-button{
-	left:625px;
+	left:1100px;
 }
