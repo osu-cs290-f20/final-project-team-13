@@ -1,9 +1,13 @@
 <main class="content" id="classpage-material">
 
+<<<<<<< HEAD
 	<div id="miscellaneous-buttons">
 		<button type="button" class="back-button"><a id="this-thing" href="/">Back</a></button>
 		<button type="button" class="add-card"><i class="fas fa-plus"></i></button>
 	</div>
+=======
+	<button type="button" class="back-button">Back</button>
+>>>>>>> 7063b7c3b2d9e15d6a193a367639ea7b5a2d98cb
 
 	<div class="class-title">
 		<h2>{{name}}</h2>
@@ -22,6 +26,7 @@
 
 	</section>
 
+<<<<<<< HEAD
 	<div id="modal-background" hidden></div>
 
 	<div id="add-definition-modal">
@@ -53,43 +58,46 @@
 				<div class="question-input-element">
 					<label for="add-question-input">Question: </label>
 					<input type="text" id="add-question-input"></input>
+=======
+	<div id="quiz-modal">
+		<button type="button" id="quiz-button">QUIZ</button>
+		
+		<section id="quiz" hidden>
+		<div id="modal-backdrop" class="hidden"></div>
+			<div id="quiz-content">
+				<div class="modal-header">
+					<h3>QUIZ MODE</h3>
+					<div id='close-button'><i class="fas fa-window-close"></i></div>
+>>>>>>> 7063b7c3b2d9e15d6a193a367639ea7b5a2d98cb
 				</div>
-				<div class="answer-input-element">
-					<label for="add-answer-input">Answer: </label>
-					<input type="text" id="add-answer-input"></input>
+				<div class="question-answer-container">
+					{{!#each flashcards}}
+						{{>questionAnswer}}
+					{{!/each}}
 				</div>
-				<button type="button" id="another-question-button">+</button>
+				<div id='prev-button'><i class="fas fa-caret-left"></i></div>
+				<div id='next-button'><i class="fas fa-caret-right"></i></div>
 			</div>
-
-			<div class="modal-footer">
-			<button type="button" id="modal-done" class="modal-hide-button action-button">Done</button>
-			</div>
-		</div>
+		</section>
 	</div>
 
-	<div id="quizmode-modal" hidden>
-		<div class = "modal-header">
-				<h3>Quiz Mode</h3>
-				<button type="button" id="modal-close" class="modal-hide-button"></button>
-		</div>
-		<div class="modal-content">
-			<div class="modal-body">
-				<div class="quiz-input-element">
-					<label for="quiz-question-input">{{partialQ}}: </label>
-					<input type="text" id="quiz-question-input"></input>
-				</div>
-				<div class="correct-answer">
-					<h2>Correct Answer: {{answer}}</h2>
-				</div>
-			</div>
-			<div class="modal-footer">
-			<button type="button" id="modal-done" class="modal-hide-button action-button">Done</button>
-			<button type="button" id="modal-back">Back</button>
-			<button type="button" id="modal-next">Next</button>
-			</div>
-		</div>
-	</div>
+</main>
+{{!-- 
+<div id="modal-background" hidden></div>
 
+<div id="quizmode-modal">
+	<div id="question">
+		<p>question</p>
+	</div>
+	<div id="answer">
+		<input type="text" id="answer-field">
+	</div>
+	<div id="real-answer">
+		<p>real answer</p>
+	</div>
+</div> --}}
+
+<<<<<<< HEAD
 	<div id="flashcardmode-modal" hidden>
 		<button type="button" id="back-flashcard"><i class="fas fa-chevron-left"></i></button>
 		<div id="flash-card">
@@ -99,7 +107,21 @@
 			<div id="card-back">
 				<p>answer</p>
 			</div>
+=======
+<div id="flashcardmode-modal">
+	<button type="button" id="back-flashcard"><i class="fas fa-chevron-left"></i></button>
+	<div id="flash-card">
+		<div id="card-front">
+			<p>question</p>
 		</div>
-		<button type="button" id="fwd-flashcard"><i class="fas fa-chevron-right"></i></button>
+		<div id="card-back">
+			<p>answer</p>
+>>>>>>> 7063b7c3b2d9e15d6a193a367639ea7b5a2d98cb
+		</div>
 	</div>
+<<<<<<< HEAD
 </main>
+=======
+	<button type="button" id="fwd-flashcard"><i class="fas fa-chevron-right"></i></button>
+</div>
+>>>>>>> 7063b7c3b2d9e15d6a193a367639ea7b5a2d98cb
