@@ -22,22 +22,27 @@
 
 	</section>
 
-	<div id="modal-background" hidden></div>
+	
 
 	<div id="add-definition-modal" hidden>
-		<button type="button" id="close-add-def-button"><i class="fas fa-window-close"></i></button>
-		
-		<div id="question-form">
-			<label for="question-input" class="question-input-label">Front Side</label>
-			<input type="text" name="question-input" id="question-input">
+		<div id="modal-background" class="hidden"></div>
+		<div class="modal-content">
+			<div class="modal-header">
+				<h3>Add Flashcard</h3>
+				<button type="button" id="close-add-def-button"><i class="fas fa-window-close"></i></button>
+			</div>
+			<div class="modal-body">
+				<div id="question-form">
+					<label for="question-input" class="question-input-label">Front Side</label>
+					<input type="text" name="question-input" id="question-input">
+				</div>
+				<div id="answer-form">
+					<label for="answer-input" class="answer-input-label">Back Side</label>
+					<input type="text" name="answer-input" id="answer-input">
+					<button type="button" id="add-new-card-button">Add Card</button>
+				</div>
+			</div>
 		</div>
-		
-		<div id="answer-form">
-			<label for="answer-input" class="answer-input-label">Back Side</label>
-			<input type="text" name="answer-input" id="answer-input">
-		</div>
-		
-		<button type="button" id="add-new-card-button">Add Card</button>
 	</div>
 
 	{{!-- <div id="class-modal" hidden>

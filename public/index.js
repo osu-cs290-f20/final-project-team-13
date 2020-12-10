@@ -50,6 +50,7 @@ if(document.getElementById('add-class')){
 	}
 }
 
+//add definition modal
 var add_def_modal = document.getElementById('add-definition-modal');
 document.getElementById('close-add-def-button').onclick = function() {
 	add_def_modal.style.display = 'none';
@@ -137,11 +138,13 @@ function update_buttons_quiz(){
 var addCardOption = document.querySelector(".add-card");
 if(addCardOption){
 	addCardOption.onclick = function(){
-		if(document.getElementById('add-definition-modal').hasAttribute('hidden')){
-			document.getElementById('add-definition-modal').removeAttribute('hidden');
-		}else{
-			document.getElementById('add-definition-modal').setAttribute('hidden', "");
-		}
+	// 	if(document.getElementById('add-definition-modal').hasAttribute('hidden')){
+	// 		document.getElementById('add-definition-modal').removeAttribute('hidden');
+	// 	}else{
+	// 		document.getElementById('add-definition-modal').setAttribute('hidden', "");
+	// 	}
+	// }
+	document.getElementById('add-definition-modal').style.display = 'flex';
 	}
 }
 
