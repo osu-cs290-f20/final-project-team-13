@@ -8,9 +8,9 @@
 	</div>
 	
 	<div class="the-buttons">
-		<button type="button" class="flashcard-mode">Flashcard Mode</button>
-		<button type="button" class="quiz-mode">Quiz Mode</button>
-		<button type="button" class="add-class-button">Add Class</button>
+		<button type="button" id="flashcard-mode">Flashcard Mode</button>
+		<button type="button" id="quiz-mode">Quiz Mode</button>
+		<button type="button" id="add-class-button">Add Class</button>
 	</div>
 
 	<section class="flashcard-definitions">
@@ -20,8 +20,6 @@
 		{{/each}}
 
 	</section>
-
-	<div id="modal-background" class="hidden"></div>
 
 	<div id="add-definition-modal">
 		<div id="question-form">
@@ -37,7 +35,7 @@
 		<button type="button" id="add-new-card-button">Add Card</button>
 	</div>
 
-	<div id="class-modal" class="hidden">
+	<div id="class-modal" hidden>
 		<div class = "modal-content">
 			<div class = "modal-header">
 				<h3>Add Class</h3>
@@ -89,17 +87,14 @@
 		</div>
 	</div>
 
-	<div id="flashcardmode-modal">
-		<button type="button" id="back-flashcard"><i class="fas fa-chevron-left"></i></button>
-		<div id="flash-card">
-			<div id="card-front">
-				<p>question</p>
-			</div>
-			<div id="card-back">
-				<p>answer</p>
-			</div>
-		</div>
-		<button type="button" id="fwd-flashcard"><i class="fas fa-chevron-right"></i></button>
-	</div>
-	<button type="button" id="fwd-flashcard"><i class="fas fa-chevron-right"></i></button>
+    <section id="flashcard-modal" hidden>\
+		<div id="modal-backdrop"></div>
+        <div id='prev-button'><i class="fas fa-caret-left"></i></div>
+        <div id='next-button'><i class="fas fa-caret-right"></i></div>
+        <div id='close-button'><i class="fas fa-window-close"></i></div>
+        {{#each flashcards}}
+            {{>flashcard}}
+        {{/each}}
+    </section>
+
 </main>

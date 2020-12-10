@@ -22,11 +22,20 @@
       {
         "question": "What's 5 - 3?",
         "answer": "2"
+      },
+      {
+        "question": "am i in limbo?",
+        "answer": "probably"
       }
     ]
   },
   "class%20three": {
     "name": "class three",
-    "flashcards": []
+    "flashcards": [
+      {
+        "question": "young, dumb, and full of...",
+        "answer": "oh, you know ;)"
+      }
+    ]
   }
 }

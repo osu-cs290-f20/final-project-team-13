@@ -20,7 +20,10 @@ app.get('/', function(req, res, next) {
 
 app.get('/class/:n', function(req, res, next) {
     var n = req.params.n;
-    res.status(200).render('class', classData[n]);
+    if(classData[n])
+        res.status(200).render('class', classData[n]);
+    else
+        next();
 });
 
 //add a class to the list

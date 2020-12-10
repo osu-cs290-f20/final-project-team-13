@@ -12,6 +12,6 @@ templates['classCard'] = template({"compiler":[8,">= 4.3.0"],"main":function(con
     + alias4(((helper = (helper = lookupProperty(helpers,"ClassURI") || (depth0 != null ? lookupProperty(depth0,"ClassURI") : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"ClassURI","hash":{},"data":data,"loc":{"start":{"line":1,"column":61},"end":{"line":1,"column":73}}}) : helper)))
     + "\">\r\n	<h3 id=\"class-title\">"
     + alias4(((helper = (helper = lookupProperty(helpers,"name") || (depth0 != null ? lookupProperty(depth0,"name") : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"name","hash":{},"data":data,"loc":{"start":{"line":2,"column":22},"end":{"line":2,"column":30}}}) : helper)))
-    + "</h3>\r\n	\r\n	<button type=\"button\" class=\"more-options\" ><i class=\"fas fa-ellipsis-v\"></i></button>\r\n\r\n	<div class=\"more-options-menu\" hidden>\r\n		<button type=\"button\" class=\"delete-class\">Delete</button>\r\n	</div>\r\n\r\n</div>";
+    + "</h3>\r\n	\r\n	<button type=\"button\" class=\"more-options\" ><i class=\"fas fa-ellipsis-v\"></i></button>\r\n\r\n	<div class=\"more-options-menu\" hidden>\r\n		<button type=\"button\" class=\"delete-class\">Delete</button>\r\n	</div>\r\n\r\n</div>\r\n";
 },"useData":true});
 })();
