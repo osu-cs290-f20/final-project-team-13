@@ -24,7 +24,7 @@
 
 	<div id="modal-background" hidden></div>
 
-	<div id="add-definition-modal">
+	<div id="add-definition-modal" hidden>
 		<div id="question-form">
 			<label for="question-input" class="question-input-label">Front Side</label>
 			<input type="text" name="question-input" id="question-input">
@@ -93,22 +93,20 @@
 	</div> --}}
 
 	<div id="quiz-modal">
-		<button type="button" id="quiz-button">Quiz Mode</button>
-		
 		<section id="quiz" hidden>
 		<div id="modal-backdrop" class="hidden"></div>
 			<div id="quiz-content">
 				<div class="modal-header">
 					<h3>QUIZ MODE</h3>
-					<div id='close-button'><i class="fas fa-window-close"></i></div>
+					<div id='quiz-close-button'><i class="fas fa-window-close"></i></div>
 				</div>
 				<div class="question-answer-container">
 					{{#each classData}}
 						{{>questionAnswer}}
 					{{/each}}
 				</div>
-				<div id='prev-button'><i class="fas fa-caret-left"></i></div>
-				<div id='next-button'><i class="fas fa-caret-right"></i></div>
+				<div id='back-button'><i class="fas fa-caret-left"></i></div>
+				<div id='next-button-quiz'><i class="fas fa-caret-right"></i></div>
 			</div>
 		</section>
 	</div>

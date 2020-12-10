@@ -79,6 +79,11 @@ a#class-title {
 	top: 40px;
 }
 
+#miscellaneous-buttons {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
 
 .one-question {
 	position: fixed;
@@ -95,15 +100,34 @@ main#classpage-material {
 	text-align: center;
 }
 
-.question, .answer {
+/*.question, .answer {
 	position: absolute;
 	width: 100%;
 	height: 100%;
 	backface-visibility:hidden;
 	left: 50px;
 	z-index:2000;
+}*/
+
+.question, .answer {
+	width: 200px;
 }
 
+.flashcard-definitions {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+}
+
+.each-card {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	padding: 10px 20px;
+	border-style: solid;
+	border-color: black;
+}
+/*
 .question{
 	max-width: 500px;
 	max-height: 100px;
@@ -123,7 +147,7 @@ main#classpage-material {
 	border-color: black;
 	border-radius: 10px;
 }
-
+*/
 .answer-input-element {
 	max-width: 500px;
 	border-color: black;
@@ -363,7 +387,7 @@ div.class-title {
     transform:rotateY(180deg);
 }
 
-#close-button{
+#close-button #modal-close-button{
 	position:absolute;
 	top:-100px;
 	left:635px;
@@ -379,7 +403,7 @@ div.class-title {
 	transition:0.25s;
 }
 
-#next-button, #prev-button{
+#next-button, #prev-button, #back-button, #next-button-quiz{
 	position:absolute;
 	z-index:1020;
 	height: 60px;
@@ -395,7 +419,7 @@ div.class-title {
 	box-shadow:0px 3px;
 }
 
-#next-button:hover, #prev-button:hover{
+#next-button:hover, #prev-button:hover, #back-button:hover, #next-button-quiz:hover{
 	transform:scale(1.25);
 	transition:0.25s;
 	background-color:#000;
@@ -413,6 +437,18 @@ div.class-title {
 
 #prev-button{
 	left:-85px;
+}
+
+#back-button{
+	position: relative;
+	right: 75px;
+	top: 35px;
+}
+
+#next-button-quiz{
+	position: relative;
+	left: 720px;
+	bottom: 170px;
 }
 
 #next-button{
