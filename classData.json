@@ -4,15 +4,19 @@
     "flashcards": [
       {
         "question": "What is 3 minus 2?",
-        "answer": "one"
+        "answer": "1"
       },
       {
         "question": "What is the best number",
         "answer": "one"
       },
       {
-        "question": "What is my favorite colo",
-        "answer": "idk"
+        "question": "What is 7 * 8?",
+        "answer": "56"
+      },
+      {
+        "question": "What is 100 / 5?",
+        "answer": "20"
       }
     ]
   },
@@ -22,15 +26,24 @@
       {
         "question": "What's 5 - 3?",
         "answer": "2"
+      },
+      {
+        "question": "Are we going to get an A?",
+        "answer": "Hopefully!"
+      },
+      {
+        "question": "What is the name of our webdev instructor?",
+        "answer": "Rob Hess"
       }
     ]
   },
   "class%20three": {
     "name": "class three",
-    "flashcards": []
-  },
-  "wooo": {
-    "name": "wooo",
-    "flashcards": []
+    "flashcards": [
+      {
+        "question": "What is the square root of 49?",
+        "answer": "7"
+      }
+    ]
   }
 }
