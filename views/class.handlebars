@@ -25,7 +25,6 @@
 	<div id="modal-background" hidden></div>
 
 	<div id="add-definition-modal" hidden>
-		
 		<button type="button" id="close-add-def-button"><i class="fas fa-window-close"></i></button>
 		
 		<div id="question-form">
@@ -107,7 +106,9 @@
 					{{#each classData}}
 						{{>questionAnswer}}
 					{{/each}}
-					
+					<div class="hide-answer" id="hide-answer">
+						<h1>                   </h1>
+					</div>
 				</div>
 				<button type="button" id="submit">Submit</button>
 				<div id='back-button'><i class="fas fa-caret-left"></i></div>

@@ -60,6 +60,8 @@ var active_question = 0;
 var questions = document.getElementsByClassName('one-question');
 var backButton = document.getElementById('back-button');
 var nextButton = document.getElementById('next-button-quiz');
+var submitButton = document.getElementById('submit');
+var hideBox = document.getElementById('hide-answer');
 
 document.getElementById('quiz-mode').onclick = function() {
 	document.getElementById('quiz').style.display = 'flex';
@@ -101,6 +103,12 @@ nextButton.onclick = function() {
 	update_questions();	
 }
 
+submitButton.onclick = function() {
+	document.getElementById('hide-answer').style.display = 'none';
+	// hideBox.classList.toggle('hidden');
+	console.log("submit clicked");
+}
+
 function update_questions(){
 	for(i = 0; i < questions.length; i++){
 		if(i != active_question){
@@ -108,12 +116,7 @@ function update_questions(){
 		}
 		else{
 			questions[i].style.display = 'block';
-			if(document.getElementById('submit')){
-				document.getElementById('submit').onclick = function() {
-					document.getElementById('answer').style.display = 'flex';
-					console.log("something");
-				}
-			}
+			document.getElementById('hide-answer').style.display = 'block';
 		}
 	}
 }

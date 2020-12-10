@@ -160,12 +160,33 @@ main#classpage-material {
 	max-width: 500px;
 	max-height: 100px;
 	min-height: 50px;
+	min-width: 300px;
+	position: relative;
+	left:175px;
+	top:20px;
 	background-color:#433A3F;
 	color:#FEF1EB;
 	border-color: black;
 	border-radius: 10px;
 	justify-content: center;
 	align-content: center;
+	padding: 20px;
+}
+
+.one-question .answer {
+	position: fixed;
+	top: 230px;
+	left: 240px;
+}
+
+#hide-answer {
+	z-index: 2200;
+	min-width: 680px;
+	max-width: 680px;
+	min-height: 100px;
+	background-color: #FEF1EB;
+	position: fixed;
+	top: 500px;
 }
 
 /*
@@ -196,6 +217,13 @@ main#classpage-material {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
+	position: relative;
+	top: 50px;
+}
+
+#answer-text-input {
+	min-width: 300px;
+	position: relative;
 }
 
 .back-button {
@@ -215,6 +243,9 @@ a#this-thing {
 	flex: 1 75px;
 	margin-right: 10px;
 	z-index: 1100;
+	font-size: 25px;
+	position: relative;
+	left: 35px;
 }
 
 .add-card {
@@ -273,9 +304,12 @@ a#this-thing {
 	width: 300px;
 	margin: 2px;
 	z-index: 2000;
+	/* position: fixed; */
+	top:146px;
+	right: 20px;
 }
 
-#add-class-modal, #add-definition-modal {
+#add-class-modal {
 	position: fixed;
 	top: 150px;
 	left: 0;
@@ -376,11 +410,8 @@ div.class-title {
 }
 
 #add-definition-modal {
-	position: relative;
-	top: 18px;
-	justify-content: center;
-	padding: 10px 20px;
-	margin: 0 0 20px 5px;
+	border-style: solid;
+	width: 300px;
 }
 
 #flashcard-modal{
@@ -441,28 +472,6 @@ div.class-title {
 	color:#FEF1EB;
 	cursor: pointer;
 	font-size:35px;
-}
-
-#close-add-def-button {
-	position:absolute;
-	top: -20px;
-	right: 800px;
-	z-index:1020;
-	border: none;
-	color:#433A3F;	
-	background-color: transparent;
-	cursor: pointer;
-	font-size: 30px;
-}
-
-#add-new-card-button {
-	border-style: none;
-	border-radius: 5px;
-	padding: 3px;
-	margin: 3px;
-	font-size: 15px;
-	background-color: #433A3F;
-	color: #FEF1EB;
 }
 
 #close-button:hover{
