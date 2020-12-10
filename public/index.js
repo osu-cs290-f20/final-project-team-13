@@ -152,14 +152,33 @@
 
 
 //add class
-// document.getElementById('add-class').onclick = function() {
-// 	console.log("add-class button clicked");
-// 	document.getElementById('add-class-modal').style.display = 'flex';
-// }
+ document.getElementById('add-class').onclick = function() {
+ 	console.log("add-class button clicked");
+ 	document.getElementById('add-class-modal').style.display = 'flex';
+ }
 
-// document.getElementById('modal-close-button').onclick = function() {
-// 	document.getElementById('add-class-modal').style.display = 'none';
-// }
+document.getElementById('modal-close-button').onclick = function() {
+ 	document.getElementById('add-class-modal').style.display = 'none';
+}
+
+document.getElementById('add-new-class-button').onclick = function(){
+	var name_input = document.getElementById('new-class-name-input');
+	var name = name_input.value;
+	if(name){
+		var cards = document.querySelectorAll("#class-card");
+		var NewName = true;
+		for(var i = 0; i < cards.length; i++){
+			if(cards[i].getAttribute('data-name') == name){
+				NewName = false;
+			}
+		}
+		if(NewName){
+			addClass(name);
+			document.getElementById('add-class-modal').style.display = 'none';
+			name_input.value = "";
+		}
+	}
+}
 
 //quiz stuff
 var active_question = 0;
