@@ -79,6 +79,11 @@ a#class-title {
 	top: 40px;
 }
 
+#miscellaneous-buttons {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
 
 .one-question {
 	position: fixed;
@@ -95,13 +100,25 @@ main#classpage-material {
 	text-align: center;
 }
 
-.question, .answer {
+/*.question, .answer {
 	position: absolute;
 	width: 100%;
 	height: 100%;
 	backface-visibility:hidden;
 	left: 50px;
 	z-index:2000;
+}*/
+
+.flashcard-definitions {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+}
+
+.each-card {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
 }
 
 .question{
