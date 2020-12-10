@@ -152,30 +152,32 @@
 
 
 //add class
- document.getElementById('add-class').onclick = function() {
- 	console.log("add-class button clicked");
- 	document.getElementById('add-class-modal').style.display = 'flex';
- }
+if(document.getElementById('add-class')){
+	document.getElementById('add-class').onclick = function() {
+		console.log("add-class button clicked");
+		document.getElementById('add-class-modal').style.display = 'flex';
+	}
 
-document.getElementById('modal-close-button').onclick = function() {
- 	document.getElementById('add-class-modal').style.display = 'none';
-}
+	document.getElementById('modal-close-button').onclick = function() {
+		document.getElementById('add-class-modal').style.display = 'none';
+	}
 
-document.getElementById('add-new-class-button').onclick = function(){
-	var name_input = document.getElementById('new-class-name-input');
-	var name = name_input.value;
-	if(name){
-		var cards = document.querySelectorAll("#class-card");
-		var NewName = true;
-		for(var i = 0; i < cards.length; i++){
-			if(cards[i].getAttribute('data-name') == name){
-				NewName = false;
+	document.getElementById('add-new-class-button').onclick = function(){
+		var name_input = document.getElementById('new-class-name-input');
+		var name = name_input.value;
+		if(name){
+			var cards = document.querySelectorAll("#class-card");
+			var NewName = true;
+			for(var i = 0; i < cards.length; i++){
+				if(cards[i].getAttribute('data-name') == name){
+					NewName = false;
+				}
 			}
-		}
-		if(NewName){
-			addClass(name);
-			document.getElementById('add-class-modal').style.display = 'none';
-			name_input.value = "";
+			if(NewName){
+				addClass(name);
+				document.getElementById('add-class-modal').style.display = 'none';
+				name_input.value = "";
+			}
 		}
 	}
 }
@@ -193,9 +195,10 @@ document.getElementById('quiz-button').onclick = function() {
 	update_questions();
 	console.log("quiz button clicked");
 }
-
-document.getElementById('submit').onclick = function() {
-	document.getElementById('answer').style.display = 'flex';
+if(document.getElementById('submit')){
+	document.getElementById('submit').onclick = function() {
+		document.getElementById('answer').style.display = 'flex';
+	}
 }
 
 document.getElementsByClassName('quiz-mode-button').onclick = function() {
@@ -250,7 +253,11 @@ function update_buttons(){
 var addCardButton = document.getElementById("add-new-card-button");
 if(addCardButton){
 	addCardButton.addEventListener('click', function(){
-		addFlashCard("test", "test");
+		var ques = document.getElementById('question-input');
+		var ans = document.getElementById('answer-input');
+		var question = ques.value;
+		var answer = ans.value;
+		addFlashCard(answer, question);
 	});
 }
 
