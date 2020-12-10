@@ -148,4 +148,4 @@ for (i = 0; i < flashCards.length; i++){
 	flashCards[i].lastElementChild.addEventListener('click', function(){
 		removeFlashCard(event);
 	});
-
+}
