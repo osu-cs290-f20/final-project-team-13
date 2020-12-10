@@ -403,7 +403,7 @@ div.class-title {
 	transition:0.25s;
 }
 
-#next-button, #prev-button{
+#next-button, #prev-button, #back-button, #next-button-quiz{
 	position:absolute;
 	z-index:1020;
 	height: 60px;
@@ -419,7 +419,7 @@ div.class-title {
 	box-shadow:0px 3px;
 }
 
-#next-button:hover, #prev-button:hover{
+#next-button:hover, #prev-button:hover, #back-button:hover, #next-button-quiz:hover{
 	transform:scale(1.25);
 	transition:0.25s;
 	background-color:#000;
@@ -437,6 +437,18 @@ div.class-title {
 
 #prev-button{
 	left:-85px;
+}
+
+#back-button{
+	position: relative;
+	right: 75px;
+	top: 35px;
+}
+
+#next-button-quiz{
+	position: relative;
+	left: 720px;
+	bottom: 170px;
 }
 
 #next-button{
