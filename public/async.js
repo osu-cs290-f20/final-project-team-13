@@ -16,6 +16,18 @@ function addFlashCardDelete(){
     });
 }
 
+function addClassCardDelete(){
+    var classCards = document.querySelectorAll("#class-card");
+    console.log(typeof(classCards));
+    var Lcontainer = classCards.item(classCards.length - 1);
+    console.log(typeof(Lcontainer));
+    console.log(typeof(Lcontainer.lastElementChild.lastElementChild));
+    //should grab delete button
+    Lcontainer.lastElementChild.lastElementChild.addEventListener('click', function(){
+        removeClassCard(event);
+    });
+}
+
 //Takes event of click and answer/question pair
 //While the function could get the values for answer and question itself,
 //since the function cannot access other functions to do things like close
