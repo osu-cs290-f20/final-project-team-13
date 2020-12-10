@@ -9,10 +9,14 @@ function showMoreOptions(event) {
 }
 
 var class_card = document.getElementsByClassName("card");
-class_card.addEventListener('mouseover', moreOptions);
+for (i = 0; i < class_card.length; i++){
+	class_card[i].addEventListener('mouseover', moreOptions);
+}
 
 var menu = document.getElementsByClassName("more-options");
-menu.addEventListener('click', showMoreOptions);
+for (i = 0; i < menu.length; i++){
+	menu[i].addEventListener('click', showMoreOptions);
+}
 
 
 function showQuizModal() {
@@ -50,13 +54,12 @@ function hideClassModal() {
 }
 
 var quizmodeButton = document.getElementsByClassName('quiz-mode');
-if (quizmodeButton) {
-	quizmodeButton.addEventListener('click', showQuizModal);
+for(i = 0; i < quizmodeButton.length; i++){
+	quizmodeButton[i].addEventListener('click', showQuizModal);
 }
 var classButton = document.getElementsByClassName('add-class');
-if (classButton) {
-	console.log("hello");
-	classButton.addEventListener('click', showClassModal);
+for(i = 0; i < classButton; i++){
+	classButton[i].addEventListener('click', showClassModal);
 }
 
 var modalAcceptButton = document.getElementById('modal-done');
@@ -68,4 +71,27 @@ var modalHideButtons = document.getElementsByClassName('modal-hide-button');
 for (var i = 0; i < modalHideButtons.length; i++) {
 	modalHideButtons[i].addEventListener('click', hideQuizModal);
 	modalHideButtons[i].addEventListener('click', hideClassModal);
+}
+
+var addCardButton = document.getElementById("add-new-card-button");
+if(addCardButton){
+	addCardButton.addEventListener('click', function(){
+		addFlashCard("test", "test");
+	});
+}
+
+var addClassButton = document.getElementById("add-class");
+if(addClassButton){
+	addClassButton.addEventListener('click', function(){
+		addClass("Test");
+	});
+}
+
+var flashCards = document.getElementsByClassName("each-card");
+console.log(flashCards);
+for (i = 0; i < flashCards.length; i++){
+	console.log(flashCards[i].lastElementChild);
+	flashCards[i].lastElementChild.addEventListener('click', function(){
+		removeFlashCard(event);
+	});
 }
