@@ -257,7 +257,7 @@ a#this-thing {
 	margin: 2px;
 }
 
-#add-class-modal {
+#add-class-modal, #add-definition-modal {
 	position: fixed;
 	top: 150px;
 	left: 0;
@@ -316,6 +316,7 @@ a#this-thing {
 	top: 18px;
 	justify-content: center;
 	padding: 10px 20px;
+	margin: 0 0 20px 5px;
 }
   
 .modal-header h3 {
@@ -358,8 +359,11 @@ div.class-title {
 }
 
 #add-definition-modal {
-	border-style: solid;
-	width: 300px;
+	position: relative;
+	top: 18px;
+	justify-content: center;
+	padding: 10px 20px;
+	margin: 0 0 20px 5px;
 }
 
 #flashcard-modal{
@@ -420,6 +424,28 @@ div.class-title {
 	color:#FEF1EB;
 	cursor: pointer;
 	font-size:35px;
+}
+
+#close-add-def-button {
+	position:absolute;
+	top: -20px;
+	right: 800px;
+	z-index:1020;
+	border: none;
+	color:#433A3F;	
+	background-color: transparent;
+	cursor: pointer;
+	font-size: 30px;
+}
+
+#add-new-card-button {
+	border-style: none;
+	border-radius: 5px;
+	padding: 3px;
+	margin: 3px;
+	font-size: 15px;
+	background-color: #433A3F;
+	color: #FEF1EB;
 }
 
 #close-button:hover{
