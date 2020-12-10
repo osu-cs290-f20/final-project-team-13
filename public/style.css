@@ -485,7 +485,7 @@ div.class-title {
     transform:rotateY(180deg);
 }
 
-#close-button, #modal-close-button, #quiz-close-button #close-add-def-button{
+#close-button, #modal-close-button, #quiz-close-button, #close-add-def-button{
 	position:absolute;
 	top:-100px;
 	left:635px;
