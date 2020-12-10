@@ -14,13 +14,13 @@
 		<button type="button" id="quiz-mode">Quiz Mode</button>
 	</div>
 
-	{{!-- <section class="flashcard-definitions">
+	<section class="flashcard-definitions">
 
 		{{#each classData}}
 			{{>definitions}}
 		{{/each}}
 
-	</section> --}}
+	</section>
 
 	<div id="modal-background" hidden></div>
 
@@ -100,7 +100,7 @@
 			<div id="quiz-content">
 				<div class="modal-header">
 					<h3>QUIZ MODE</h3>
-					<div id='close-button'><i class="fas fa-window-close"></i></div>
+					<div id='quiz-close-button'><i class="fas fa-window-close"></i></div>
 				</div>
 				<div class="question-answer-container">
 					{{#each classData}}
