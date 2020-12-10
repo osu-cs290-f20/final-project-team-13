@@ -50,6 +50,11 @@ if(document.getElementById('add-class')){
 	}
 }
 
+var add_def_modal = document.getElementById('add-definition-modal');
+document.getElementById('close-add-def-button').onclick = function() {
+	add_def_modal.style.display = 'none';
+}
+
 //quiz stuff
 var active_question = 0;
 var questions = document.getElementsByClassName('one-question');
