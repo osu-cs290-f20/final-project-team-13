@@ -184,15 +184,21 @@ if(document.getElementById('add-class')){
 	var menus = document.querySelectorAll(".more-options");
 	//menus.forEach
 	for(var i = 0; i < menus.length; i++){
-		console.log(menus[i].parentElement.lastElementChild);
+		//console.log(menus[i].parentElement.lastElementChild);
 		menus[i].onclick = function(){
 			//should grab more options menu
-			//this.parentElement.lastElementChild.setAttribute("test", "true");
 			if(this.parentElement.lastElementChild.hasAttribute('hidden')){
 				this.parentElement.lastElementChild.removeAttribute('hidden');
 			}else{
 				this.parentElement.lastElementChild.setAttribute('hidden', "");
 			}
+		}
+	}
+
+	var deleteClassButtons = document.querySelectorAll(".delete-class");
+	for(var i = 0; i < deleteClassButtons.length; i++){
+		deleteClassButtons[i].onclick = function(){
+			removeClass(event);
 		}
 	}
 }
