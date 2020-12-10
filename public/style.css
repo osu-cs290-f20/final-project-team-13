@@ -116,6 +116,10 @@ a#class-title {
 	perspective: 1000px;
 }
 
+.one-question-content .answer {
+	z-index: 2000;
+}
+
 main#classpage-material {
 	display: flex;
 	flex-direction: column;
@@ -151,6 +155,19 @@ main#classpage-material {
 	border-style: solid;
 	border-color: #433A3F;
 }
+
+.one-question .question {
+	max-width: 500px;
+	max-height: 100px;
+	min-height: 50px;
+	background-color:#433A3F;
+	color:#FEF1EB;
+	border-color: black;
+	border-radius: 10px;
+	justify-content: center;
+	align-content: center;
+}
+
 /*
 .question{
 	max-width: 500px;
@@ -250,11 +267,12 @@ a#this-thing {
 	border-color: black;
 	border-width: 2px;
 	position: relative;
-	left: 20px;
+	left: 200px;
 	padding: 5px 0px;
 	max-width: 70px;
 	width: 300px;
 	margin: 2px;
+	z-index: 2000;
 }
 
 #add-class-modal {
@@ -315,13 +333,13 @@ a#this-thing {
 	position: relative;
 	top: 18px;
 	justify-content: center;
-	padding: 10px 20px;
+	padding: 30px 30px;
 }
   
 .modal-header h3 {
 	font-family: Arial, sans-serif;
 	margin: 0;
-	font-size: 28px;
+	font-size: 38px;
 }
 
 div.class-title {

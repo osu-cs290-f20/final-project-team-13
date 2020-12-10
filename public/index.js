@@ -63,11 +63,13 @@ document.getElementById('quiz-mode').onclick = function() {
 	update_questions();
 	console.log("quiz button clicked");
 }
-if(document.getElementById('submit')){
-	document.getElementById('submit').onclick = function() {
-		document.getElementById('answer').style.display = 'flex';
-	}
-}
+// if(document.getElementById('submit')){
+// 	console.log("something");
+// 	document.getElementById('submit').onclick = function() {
+// 		document.getElementById('answer').style.display = 'flex';
+// 		console.log("something");
+// 	}
+// }
 
 document.getElementsByClassName('quiz-mode-button').onclick = function() {
 	console.log("quiz mode button clicked");
@@ -101,6 +103,12 @@ function update_questions(){
 		}
 		else{
 			questions[i].style.display = 'block';
+			if(document.getElementById('submit')){
+				document.getElementById('submit').onclick = function() {
+					document.getElementById('answer').style.display = 'flex';
+					console.log("something");
+				}
+			}
 		}
 	}
 }
