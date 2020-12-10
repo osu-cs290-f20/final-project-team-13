@@ -77,7 +77,6 @@ a#class-title {
 }
 
 
-
 .one-question {
 	position: fixed;
 	z-index: 1010;
@@ -142,7 +141,7 @@ div.class-title {
 	font-size: 30px;
 }
 
-.flashcard-mode, .quiz-mode {
+#flashcard-mode, #quiz-mode {
 	font-size: 25px;
 	color: #FEF1EB;
 	background-color: #54494f;
@@ -155,8 +154,6 @@ div.class-title {
 	margin: 2px;
 }
 
-
-
 #modal-background {
 	position: fixed;
 	top: 0;
@@ -164,10 +161,115 @@ div.class-title {
 	left: 0;
 	right: 0;
 	z-index: 1000;
-	background-color: rgba(0, 0, 0, 0.85);
+	background-color: rgba(0, 0, 0, 0.6);
 }
 
 #add-definition-modal {
 	border-style: solid;
 	width: 300px;
+}
+
+#flashcard-modal{
+	position:fixed;
+	top:50%;
+	left:50%;
+	margin-top:-180px;
+	margin-left:-300px;
+}
+
+.flash-card{
+	position:fixed;
+	z-index: 1020;
+    background-color:transparent;
+    width:600px;
+    height:360px;
+	perspective:1000px;
+}
+
+.flash-card-content{
+	z-index: 1020;
+    border:1px solid #000;
+    position:relative;
+    width:100%;
+    height:100%;
+    text-align:center;
+    transition:0.75s;
+	transform-style:preserve-3d;
+}
+
+.flash-card:hover .flash-card-content{
+    transform:rotateY(180deg);
+}
+
+.card-front, .card-back{
+    position:absolute;
+    width:100%;
+    height:100%;
+    backface-visibility:hidden;
+}
+
+.card-front{
+	background-color:#433A3F;
+	color:#FEF1EB
+}
+
+.card-back{
+    background-color:#FEF1EB;
+    transform:rotateY(180deg);
+}
+
+#close-button{
+	position:absolute;
+	top:-100px;
+	left:635px;
+	z-index:1020;
+	border: none;
+	color:#FEF1EB;
+	cursor: pointer;
+	font-size:35px;
+}
+
+#close-button:hover{
+	transform:scale(1.25);
+	transition:0.25s;
+}
+
+#next-button, #prev-button{
+	position:absolute;
+	z-index:1020;
+	height: 60px;
+	width: 60px;
+	border: none;
+	margin-top:140px;
+	border-radius: 30px;
+	background-color:#FEF1EB;
+	color: #000;
+	cursor: pointer;
+	text-align:center;
+	font-size:50px;
+	box-shadow:0px 3px;
+}
+
+#next-button:hover, #prev-button:hover{
+	transform:scale(1.25);
+	transition:0.25s;
+	background-color:#000;
+	color:#fef1eb;
+}
+
+#prev-button i{
+	margin-right:12px;
+	margin-top:4px;
+}
+#next-button i{
+	margin-left:8px;
+	margin-top:4px;
+}
+
+#prev-button{
+	left:-85px;
+}
+
+#next-button{
+	left:625px;
 }
