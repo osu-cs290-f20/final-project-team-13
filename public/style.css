@@ -109,6 +109,10 @@ main#classpage-material {
 	z-index:2000;
 }*/
 
+.question, .answer {
+	width: 200px;
+}
+
 .flashcard-definitions {
 	display: flex;
 	flex-direction: column;
@@ -119,8 +123,11 @@ main#classpage-material {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
+	padding: 10px 20px;
+	border-style: solid;
+	border-color: black;
 }
-
+/*
 .question{
 	max-width: 500px;
 	max-height: 100px;
@@ -140,7 +147,7 @@ main#classpage-material {
 	border-color: black;
 	border-radius: 10px;
 }
-
+*/
 .answer-input-element {
 	max-width: 500px;
 	border-color: black;
