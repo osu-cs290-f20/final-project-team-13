@@ -19,8 +19,29 @@
 
 	</section>
 
-</main>
+	<div id="quiz-modal">
+		<button type="button" id="quiz-button">QUIZ</button>
+		
+		<section id="quiz" hidden>
+		<div id="modal-backdrop" class="hidden"></div>
+			<div id="quiz-content">
+				<div class="modal-header">
+					<h3>QUIZ MODE</h3>
+					<div id='close-button'><i class="fas fa-window-close"></i></div>
+				</div>
+				<div class="question-answer-container">
+					{{!#each flashcards}}
+						{{>questionAnswer}}
+					{{!/each}}
+				</div>
+				<div id='prev-button'><i class="fas fa-caret-left"></i></div>
+				<div id='next-button'><i class="fas fa-caret-right"></i></div>
+			</div>
+		</section>
+	</div>
 
+</main>
+{{!-- 
 <div id="modal-background" hidden></div>
 
 <div id="quizmode-modal">
@@ -33,7 +54,7 @@
 	<div id="real-answer">
 		<p>real answer</p>
 	</div>
-</div>
+</div> --}}
 
 <div id="flashcardmode-modal">
 	<button type="button" id="back-flashcard"><i class="fas fa-chevron-left"></i></button>

@@ -4,25 +4,6 @@
 	<button type="button" class="more-options" class="hidden"><i class="fas fa-ellipsis-v"></i></button>
 </div>
 
-	<button type="button" id="quiz-button">QUIZ</button>
-    
-    <section id="quiz" hidden>
-    <div id="modal-backdrop" class="hidden"></div>
-        <div id="quiz-content">
-            <div class="modal-header">
-                <h3>QUIZ MODE</h3>
-                <div id='close-button'><i class="fas fa-window-close"></i></div>
-            </div>
-            <div class="question-answer-container">
-                {{#each flashcards}}
-                    {{>questionAnswer}}
-                {{/each}}
-            </div>
-            <div id='prev-button'><i class="fas fa-caret-left"></i></div>
-            <div id='next-button'><i class="fas fa-caret-right"></i></div>
-        </div>
-    </section>
-
 <div class="more-options-menu" hidden>
 	<button type="button" class="delete-class">Delete</button>
 </div>
