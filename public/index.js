@@ -164,13 +164,13 @@
 //quiz stuff
 var active_question = 0;
 var questions = document.getElementsByClassName('one-question');
-var next_button = document.getElementById('next-button');
-var prev_button = document.getElementById('prev-button');
+var backButton = document.getElementById('back-button');
+var nextButton = document.getElementById('next-button-quiz');
 
 document.getElementById('quiz-button').onclick = function() {
 	document.getElementById('quiz').style.display = 'flex';
 	active_question = 0;
-	update_buttons();
+	update_buttons_quiz();
 	update_questions();
 	console.log("quiz button clicked");
 }
@@ -190,17 +190,17 @@ document.getElementById('close-button').onclick = function() {
 }
 
 
-prev_button.onclick = function() {
+backButton.onclick = function() {
 	console.log(active_question);
 	active_question -= 1;
-	update_buttons();
+	update_buttons_quiz();
 	update_cards();
 }
 
-next_button.onclick = function() {
+nextButton.onclick = function() {
 	console.log(active_question);
 	active_question += 1;
-	update_buttons();
+	update_buttons_quiz();
 	update_cards();	
 }
 
@@ -215,7 +215,7 @@ function update_questions(){
 	}
 }
 
-function update_buttons(){
+function update_buttons_quiz(){
 	console.log(active_question);
 	if(questions[active_question - 1])
 		prev_button.style.display = 'block';
