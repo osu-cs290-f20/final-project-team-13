@@ -485,7 +485,7 @@ div.class-title {
     transform:rotateY(180deg);
 }
 
-#close-button, #modal-close-button, #quiz-close-button, #close-add-def-button{
+#close-button, #modal-close-button, #quiz-close-button{
 	position:absolute;
 	top:-100px;
 	left:635px;
@@ -494,6 +494,22 @@ div.class-title {
 	color:#FEF1EB;
 	cursor: pointer;
 	font-size:35px;
+}
+
+#close-add-def-button {
+	position: relative;
+	top:-100px;
+	left:500px;
+	z-index:1020;
+	border: none;
+	/* color:#FEF1EB; */
+	cursor: pointer;
+	font-size:35px;
+}
+
+#close-add-def-button:hover {
+	transform:scale(1.25);
+	transition:0.25s;
 }
 
 #close-button:hover{
