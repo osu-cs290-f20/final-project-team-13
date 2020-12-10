@@ -20,7 +20,9 @@ app.get('/', function(req, res, next) {
 
 app.get('/class/:n', function(req, res, next) {
     var n = req.params.n;
-    res.status(200).render('class', classData[n]);
+    console.log(n);
+    console.log(classData[encodeURI(n)]);
+    res.status(200).render('class', {classData: classData[encodeURI(n)].flashcards});
 });
 
 //add a class to the list
@@ -125,26 +127,36 @@ app.post('/:class/removeCard', function (req, res, next){
     console.log("req.body:", req.body);
     if(req.body && req.body.question && req.body.answer){
         var URI = encodeURI(req.params.class);
-        if(classData[URI] && classData[URI].flashcards.indexOf({question: req.body.question,
-            answer: req.body.answer}) != -1){
-            //remove flashcard
-            classData[URI].flashcards.splice(classData[URI].flashcards.indexOf({
-                question: req.body.question,
-                answer: req.body.answer
-            }), 1);
-            console.log("New data for ", decodeURI(URI), ": ", classData[URI]);
-            fs.writeFile(
-                __dirname + '/classData.json',
-                JSON.stringify(classData, null, 2),
-                function(err, data) {
-                    if(err) {
-                        console.log("add class write error: ", err);
-                        res.status(500).send("Error removing card");
-                    } else {
-                        res.status(200).send("flashcard removed.");
-                    }
+        console.log(classData[URI]);
+        console.log(classData[URI].flashcards);
+        console.log(req.body.answer);
+        console.log(req.body.question);
+        var flashcard = {question: req.body.question, answer: req.body.answer};
+        if(classData[URI]){
+            var cardRemoved = false;
+            for(i = 0; i < Object.keys(classData[URI].flashcards).length; i++){
+                if(JSON.stringify(classData[URI].flashcards[i]) === JSON.stringify(flashcard)){
+                    classData[URI].flashcards.splice(i, 1);
+                    console.log("New data for ", decodeURI(URI), ": ", classData[URI]);
+                    fs.writeFile(
+                        __dirname + '/classData.json',
+                        JSON.stringify(classData, null, 2),
+                        function(err, data) {
+                            if(err) {
+                                console.log("add class write error: ", err);
+                                res.status(500).send("Error removing card");
+                            } else {
+                                res.status(200).send("flashcard removed.");
+                            }
+                        }
+                    );
+                    cardRemoved = true;
+                    break;
                 }
-            );
+            }
+            if(!cardRemoved){
+                next();
+            }
         } else {
             next();
         }
