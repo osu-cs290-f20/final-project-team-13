@@ -1,7 +1,9 @@
 <main class="content" id="classpage-material">
 
-	<button type="button" class="back-button">Back</button>
-	<button type="button" class="add-card"><i class="fas fa-plus"></i></button>
+	<div id="miscellaneous-buttons">
+		<button type="button" class="back-button"><a id="this-thing" href="/">Back</a></button>
+		<button type="button" class="add-card"><i class="fas fa-plus"></i></button>
+	</div>
 
 	<div class="class-title">
 		<h2>{{name}}</h2>
@@ -10,18 +12,17 @@
 	<div class="the-buttons">
 		<button type="button" class="flashcard-mode">Flashcard Mode</button>
 		<button type="button" class="quiz-mode">Quiz Mode</button>
-		<button type="button" class="add-class-button">Add Class</button>
 	</div>
 
 	<section class="flashcard-definitions">
 
 		{{#each classData}}
-			{{>definitions}}
+			{{>definitions.flashcards}}
 		{{/each}}
 
 	</section>
 
-	<div id="modal-background" class="hidden"></div>
+	<div id="modal-background" hidden></div>
 
 	<div id="add-definition-modal">
 		<div id="question-form">
@@ -37,7 +38,7 @@
 		<button type="button" id="add-new-card-button">Add Card</button>
 	</div>
 
-	<div id="class-modal" class="hidden">
+	<div id="class-modal" class="hidden" hidden>
 		<div class = "modal-content">
 			<div class = "modal-header">
 				<h3>Add Class</h3>
@@ -89,7 +90,7 @@
 		</div>
 	</div>
 
-	<div id="flashcardmode-modal">
+	<div id="flashcardmode-modal" hidden>
 		<button type="button" id="back-flashcard"><i class="fas fa-chevron-left"></i></button>
 		<div id="flash-card">
 			<div id="card-front">
@@ -101,5 +102,4 @@
 		</div>
 		<button type="button" id="fwd-flashcard"><i class="fas fa-chevron-right"></i></button>
 	</div>
-	<button type="button" id="fwd-flashcard"><i class="fas fa-chevron-right"></i></button>
 </main>
