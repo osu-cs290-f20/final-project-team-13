@@ -167,7 +167,7 @@ var questions = document.getElementsByClassName('one-question');
 var backButton = document.getElementById('back-button');
 var nextButton = document.getElementById('next-button-quiz');
 
-document.getElementById('quiz-button').onclick = function() {
+document.getElementById('quiz-mode').onclick = function() {
 	document.getElementById('quiz').style.display = 'flex';
 	active_question = 0;
 	update_buttons_quiz();
