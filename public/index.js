@@ -151,7 +151,7 @@
 // }
 
 
-//add class
+//add & remove class
 if(document.getElementById('add-class')){
 	document.getElementById('add-class').onclick = function() {
 		console.log("add-class button clicked");
@@ -180,6 +180,21 @@ if(document.getElementById('add-class')){
 			}
 		}
 	}
+	//var more_menus = document.querySelectorAll(".more-options-menu");
+	var menus = document.querySelectorAll(".more-options");
+	//menus.forEach
+	for(var i = 0; i < menus.length; i++){
+		console.log(menus[i].parentElement.lastElementChild);
+		menus[i].onclick = function(){
+			//should grab more options menu
+			//this.parentElement.lastElementChild.setAttribute("test", "true");
+			if(this.parentElement.lastElementChild.hasAttribute('hidden')){
+				this.parentElement.lastElementChild.removeAttribute('hidden');
+			}else{
+				this.parentElement.lastElementChild.setAttribute('hidden', "");
+			}
+		}
+	}
 }
 
 //quiz stuff
@@ -188,12 +203,14 @@ var questions = document.getElementsByClassName('one-question');
 var next_button = document.getElementById('next-button');
 var prev_button = document.getElementById('prev-button');
 
-document.getElementById('quiz-button').onclick = function() {
-	document.getElementById('quiz').style.display = 'flex';
-	active_question = 0;
-	update_buttons();
-	update_questions();
-	console.log("quiz button clicked");
+if(document.getElementById('quiz-button')){
+	document.getElementById('quiz-button').onclick = function() {
+		document.getElementById('quiz').style.display = 'flex';
+		active_question = 0;
+		update_buttons();
+		update_questions();
+		console.log("quiz button clicked");
+	}
 }
 if(document.getElementById('submit')){
 	document.getElementById('submit').onclick = function() {
@@ -204,26 +221,30 @@ if(document.getElementById('submit')){
 document.getElementsByClassName('quiz-mode-button').onclick = function() {
 	console.log("quiz mode button clicked");
 }
-
-document.getElementById('close-button').onclick = function() {
-	document.getElementById('quiz').style.display = 'none';
-	document.getElementById('answer-text-input').value = '';
-	document.getElementById('answer').style.display = 'none';
+if(document.getElementById('close-button')){
+	document.getElementById('close-button').onclick = function() {
+		document.getElementById('quiz').style.display = 'none';
+		document.getElementById('answer-text-input').value = '';
+		document.getElementById('answer').style.display = 'none';
+	}
 }
 
-
-prev_button.onclick = function() {
-	console.log(active_question);
-	active_question -= 1;
-	update_buttons();
-	update_cards();
+if(prev_button){
+	prev_button.onclick = function() {
+		console.log(active_question);
+		active_question -= 1;
+		update_buttons();
+		update_cards();
+	}
 }
 
-next_button.onclick = function() {
-	console.log(active_question);
-	active_question += 1;
-	update_buttons();
-	update_cards();	
+if(next_button){
+	next_button.onclick = function() {
+		console.log(active_question);
+		active_question += 1;
+		update_buttons();
+		update_cards();	
+	}
 }
 
 function update_questions(){
@@ -283,51 +304,52 @@ var flashcard_modal = document.getElementById('flashcard-modal');
 var flashcards = document.getElementsByClassName('flash-card');
 var next_button = document.getElementById('next-button');
 var prev_button = document.getElementById('prev-button');
+if(document.getElementById('flashcard-mode')){
+	document.getElementById('flashcard-mode').onclick = function() {
+		flashcard_modal.style.display = 'flex';
+		active_card = 0;
+		update_buttons();
+		update_cards();
+	}
 
-document.getElementById('flashcard-mode').onclick = function() {
-	flashcard_modal.style.display = 'flex';
-	active_card = 0;
-	update_buttons();
-	update_cards();
-}
+	document.getElementById('close-button').onclick = function() {
+		flashcard_modal.style.display = 'none';
+		modal_background.style.display = 'none';
+	}
 
-document.getElementById('close-button').onclick = function() {
-	flashcard_modal.style.display = 'none';
-	modal_background.style.display = 'none';
-}
+	prev_button.onclick = function() {
+		active_card -= 1;
+		update_buttons();
+		update_cards();
+	}
 
-prev_button.onclick = function() {
-	active_card -= 1;
-	update_buttons();
-	update_cards();
-}
+	next_button.onclick = function() {
+		active_card += 1;
+		update_buttons();
+		update_cards();	
+	}
 
-next_button.onclick = function() {
-	active_card += 1;
-	update_buttons();
-	update_cards();	
-}
-
-function update_cards(){
-	for(i = 0; i < flashcards.length; i++){
-		if(i != active_card){
-			flashcards[i].style.display = 'none';
-		}
-		else{
-			flashcards[i].style.display = 'block';
+	function update_cards(){
+		for(i = 0; i < flashcards.length; i++){
+			if(i != active_card){
+				flashcards[i].style.display = 'none';
+			}
+			else{
+				flashcards[i].style.display = 'block';
+			}
 		}
 	}
-}
 
-function update_buttons(){
-	if(flashcards[active_card - 1])
-		prev_button.style.display = 'block';
-	else
-		prev_button.style.display = 'none';
+	function update_buttons(){
+		if(flashcards[active_card - 1])
+			prev_button.style.display = 'block';
+		else
+			prev_button.style.display = 'none';
 
-	if(flashcards[active_card + 1])
-		next_button.style.display = 'block';
-	else
-		next_button.style.display = 'none';
+		if(flashcards[active_card + 1])
+			next_button.style.display = 'block';
+		else
+			next_button.style.display = 'none';
+	}
 }
 //levi's flashcard shit stops here
