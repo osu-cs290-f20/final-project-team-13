@@ -78,6 +78,14 @@ a#class-title {
 
 
 
+.one-question {
+	position: fixed;
+	z-index: 1010;
+	width: 600px;
+	height: 360px;
+	perspective: 1000px;
+}
+
 main#classpage-material {
 	display: flex;
 	flex-direction: column;
@@ -85,7 +93,27 @@ main#classpage-material {
 	text-align: center;
 }
 
-#miscellaneous-buttons {
+.question, .answer {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	backface-visibility:hidden;
+}
+
+.question{
+	max-width: 500px;
+	max-height: 100px;
+	top: 100px;
+	background-color:#433A3F;
+	color:#FEF1EB;
+	border-color: black;
+	border-radius: 10px;
+}
+
+.answer-input-element {
+	max-width: 500px;
+	border-color: black;
+	border-radius: 10px;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
