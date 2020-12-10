@@ -33,6 +33,10 @@ body {
 	flex-flow: row wrap;
 }
 
+#flashcard-button{
+	cursor: pointer;
+}
+
 .card {
 	height: 180px;
 	width: 300px;
@@ -103,6 +107,7 @@ button#add-class {
 
 .modal-footer {
 	display: flex;
+	
 }
 
 #modal-backdrop{
