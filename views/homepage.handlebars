@@ -1,7 +1,9 @@
 <main class="content" id="homepage-material">
 	
-	<button id="add-class" class="card"><i class="fas fa-plus"></i></button>
+{{!-- <button id="add-class" class="card"><i class="fas fa-plus"></i></button> --}}
 
+	<button id="add-class" class="card"><i class="fas fa-plus"></i></button>
+	
 	<div id="classes">
 		{{#each classData}}
 			{{>classCard}}
@@ -9,25 +11,24 @@
 	</div>
 
 	<div id="add-class-modal" class="hidden" hidden>
-
+		<div id="modal-backdrop" class="hidden"></div>
 		<div class = "modal-content">
 			<div class = "modal-header">
 				<h3>Add Class</h3>
-				<button type="button" id="modal-close" class="modal-hide-button"></button>
+				<div id='modal-close-button'><i class="fas fa-window-close"></i></div>
+				{{!-- <button type="button" id="modal-close" class="modal-hide-button"></button> --}}
 			</div>
-
 			<div class="modal-body">
 				<div id="new-class-name-form">
 					<label for="new-class-name-input" class="new-class-name-input-label">Name of New Class</label>
 					<input type="text" name="new-class-name-input" id="new-class-name-input">
+					<button type="button" id="add-new-class-button">Add Class</button>
 				</div>
 			</div>
 			
-			<button type="button" id="add-new-class-button">Add Class</button>
-
-			<div class="modal-footer">
+			{{!-- <div class="modal-footer">
 				<button type="button" id="modal-done" class="modal-hide-button action-button">Done</button>
-			</div>
+			</div> --}}
 		</div>
 
 	</div>

@@ -38,7 +38,7 @@
 		<button type="button" id="add-new-card-button">Add Card</button>
 	</div>
 
-	<div id="class-modal" hidden>
+	{{!-- <div id="class-modal" hidden>
 		<div class = "modal-content">
 			<div class = "modal-header">
 				<h3>Add Class</h3>
@@ -67,9 +67,9 @@
 		</div>
 	</div>
 
-</div>
+</div> --}}
 
-	<div id="quizmode-modal" hidden>
+	{{!-- <div id="quizmode-modal" hidden>
 		<div class = "modal-header">
 				<h3>Quiz Mode</h3>
 				<button type="button" id="modal-close" class="modal-hide-button"></button>
@@ -90,6 +90,27 @@
 			<button type="button" id="modal-next">Next</button>
 			</div>
 		</div>
+	</div> --}}
+
+	<div id="quiz-modal">
+		<button type="button" id="quiz-button">Quiz Mode</button>
+		
+		<section id="quiz" hidden>
+		<div id="modal-backdrop" class="hidden"></div>
+			<div id="quiz-content">
+				<div class="modal-header">
+					<h3>QUIZ MODE</h3>
+					<div id='close-button'><i class="fas fa-window-close"></i></div>
+				</div>
+				<div class="question-answer-container">
+					{{#each classData}}
+						{{>questionAnswer}}
+					{{/each}}
+				</div>
+				<div id='prev-button'><i class="fas fa-caret-left"></i></div>
+				<div id='next-button'><i class="fas fa-caret-right"></i></div>
+			</div>
+		</section>
 	</div>
 
 	<section id="flashcard-modal" hidden>

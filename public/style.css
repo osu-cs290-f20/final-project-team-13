@@ -50,6 +50,9 @@ body {
 
 #add-class {
 	font-size: 40px;
+	border-style: solid;
+	border-color: black;
+	border-width: 2px;
 	background-color: transparent;
 }
 
@@ -97,14 +100,26 @@ main#classpage-material {
 	width: 100%;
 	height: 100%;
 	backface-visibility:hidden;
+	left: 50px;
+	z-index:2000;
 }
 
 .question{
 	max-width: 500px;
 	max-height: 100px;
-	top: 100px;
+	top: 40px;
 	background-color:#433A3F;
 	color:#FEF1EB;
+	border-color: black;
+	border-radius: 10px;
+}
+
+.answer{
+	max-width: 500px;
+	max-height: 100px;
+	top: 220px;
+	justify-content: center;
+	background-color:#FEF1EB;
 	border-color: black;
 	border-radius: 10px;
 }
@@ -129,6 +144,13 @@ a#this-thing {
 	text-decoration: none;
 	color: black;
 }
+  
+.answer-input-element > label {
+	font-weight: 600;
+	flex: 1 75px;
+	margin-right: 10px;
+	z-index: 1100;
+}
 
 .add-card {
 	font-size: 30px;
@@ -136,6 +158,123 @@ a#this-thing {
 	border-style: none;
 }
 
+#modal-backdrop{
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 1000;
+	background-color: rgba(0, 0, 0, 0.6);
+}
+
+#modal-done {
+	font-family: Arial, sans-serif;
+	font-size: 15px;
+	color: #FEF1EB;
+	background-color: #54494f;
+	z-index: 1110;
+	border-radius: 10px;
+	border-style: solid;
+	border-color: black;
+	border-width: 2px;
+	margin: 2px;
+}
+
+#quiz {
+	position: fixed;
+	top: 150px;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	/* margin-top:-180px;
+	margin-left:-300px; */
+	z-index: 1010;
+}
+
+#submit {
+	font-family: Arial, sans-serif;
+	font-size: 15px;
+	color: #FEF1EB;
+	background-color: #54494f;
+	border-radius: 10px;
+	border-style: solid;
+	border-color: black;
+	border-width: 2px;
+	position: relative;
+	left: 20px;
+	padding: 5px 0px;
+	max-width: 70px;
+	width: 300px;
+	margin: 2px;
+}
+
+#add-class-modal {
+	position: fixed;
+	top: 150px;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	/* margin-top:-180px;
+	margin-left:-300px; */
+	z-index: 1010;
+}
+
+.modal-content {
+	width: auto;
+	max-width: 500px;
+	min-width: 500px;
+	min-height: 300px;
+	max-height: 300px;
+	margin: 40px auto;
+	background-color: #FEF1EB;
+	border-radius: 15px;
+	z-index: 1010;
+}
+.flashcard-mode, .quiz-mode-button {
+	font-size: 25px;
+	color: #FEF1EB;
+	background-color: #54494f;
+	border-radius: 18px;
+	border-style: solid;
+	border-color: black;
+	border-width: 2px;
+	padding: 5px 0px;
+	width: 300px;
+	margin: 2px;
+}
+
+#quiz #quiz-content {
+	width: auto;
+	max-width: 700px;
+	min-width: 700px;
+	min-height: 500px;
+	max-height: 500px;
+	margin: 40px auto;
+	background-color: #FEF1EB;
+	border-radius: 15px;
+	z-index: 1010;
+}
+
+#modal-close-button {
+	position: relative;
+	left:440px;
+	bottom: 40px;
+	z-index: 1110;
+}
+
+.modal-header {
+	position: relative;
+	top: 18px;
+	justify-content: center;
+	padding: 10px 20px;
+}
+  
+.modal-header h3 {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	font-size: 28px;
+}
 
 div.class-title {
 	font-size: 30px;
@@ -162,6 +301,12 @@ div.class-title {
 	right: 0;
 	z-index: 1000;
 	background-color: rgba(0, 0, 0, 0.6);
+}
+
+#new-class-name-form {
+	position: relative;
+	left: 30px;
+	font-family: Arial, sans-serif;
 }
 
 #add-definition-modal {
